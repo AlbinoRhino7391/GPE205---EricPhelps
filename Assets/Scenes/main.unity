@@ -253,7 +253,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.63
-  m_Center: {x: 0, y: 0.8, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &256537602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +280,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 60
   rotationSpeed: 40
+  shellPrefab: {fileID: 8041450024253959311, guid: d486658b743a4c44bbb46adbbddaee02, type: 3}
+  damageDone: 50
+  shootForce: 200
+  shootOffset: {x: 0, y: 1.2, z: 0}
+--- !u!114 &256537607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256537595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89588ab973639cb4c9a183fcc4322f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &365277055
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float maxHealth;
+    public float currHealth;
+
+    public void Start()
     {
-        
+        currHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float amount, Pawn owner)
     {
-        
+        currHealth = currHealth - amount;
+
+        if (currHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Destroy(this.gameObject);
     }
 }

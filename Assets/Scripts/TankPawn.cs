@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class TankPawn : Pawn
 {
+   
+
     // Start is called before the first frame update
     public override void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -46,6 +47,7 @@ public class TankPawn : Pawn
 
     public override void Shoot()
     {
+        shooter.Shoot(shellPrefab, shootForce, damageDone, this, shootOffset);
         base.Shoot();
         Debug.Log("Fire!");
     }

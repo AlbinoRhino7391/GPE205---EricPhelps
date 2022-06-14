@@ -8,10 +8,16 @@ public class Pawn : MonoBehaviour
 {
     protected Mover mover;
     protected Health health;
+    protected Shooter shooter;
 
     //public variables
     public float moveSpeed;
     public float rotationSpeed;
+    public GameObject shellPrefab;
+    public float damageDone;
+    public float shootForce;
+    public Vector3 shootOffset;
+
 
 
 
@@ -20,6 +26,8 @@ public class Pawn : MonoBehaviour
     {
         //load the mover in at start.
         mover = GetComponent<Mover>();
+        shooter = GetComponent<Shooter>();
+
     }
 
     // Update is called once per frame
