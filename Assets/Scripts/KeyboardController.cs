@@ -14,6 +14,8 @@ public class KeyboardController : Controller
     // Start is called before the first frame update
     public override void Start()
     {
+        //add the players to the lists.
+        GameManager.instance.players.Add(this);
         //runs the start function from the parent class.
         base.Start();
     }
@@ -23,6 +25,12 @@ public class KeyboardController : Controller
     {
         //Processes our make decisions function.
         MakeDecisions();
+    }
+
+    public void OnDestroy()
+    {
+        //removes players from the tracking list.
+        GameManager.instance.players.Remove(this);
     }
 
     //describes the function.
