@@ -24,6 +24,9 @@ public abstract class Pawn : MonoBehaviour
     public float damageDone;
     public float shellLifespan;
 
+    // public vars
+    public float fireRate;
+
 
     // Start and Updates, MIGHT be overridden, so we use the keyword Vritual
     public virtual void Start()

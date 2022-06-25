@@ -5,15 +5,23 @@ using UnityEngine;
 //This is a child class so we need to declare what we are inheriting from.
 public class TankPawn : Pawn
 {
+    //private var for timer
+    private float nextTimeYouCanShoot;
+
     // For right Now nothing changes from the parent so use base. command.
     public override void Start()
     {
+        nextTimeYouCanShoot = Time.time + fireRate;
         base.Start();
     }
 
     // Update is called once per frame
     public override void Update()
     {
+        if (Time.time >= nextTimeYouCanShoot) 
+        {
+            nextTimeYouCanShoot = Time.time + fireRate;
+        }
         base.Start();
     }
     

@@ -30,13 +30,13 @@ public class Health : MonoBehaviour
         //Debug.log(source.name + "healed for " + healAmount);
     }
     // we removed the update function
-    public void TakeDamage(float amount, Pawn source)
+    public void TakeDamage(float damageDone, Pawn source)
     {
         //set the range for what the health can be.
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         //this function does the math for us, subtracting the amount of damage from the current health of an object.
         // the debug is so we can see what is happening while the game runs.
-        currentHealth = currentHealth - amount;
+        currentHealth = currentHealth - damageDone;
         //Debug.log(source.name + "did " + damageAmount + " damage to " + gameObject.name);
 
         if (currentHealth <= 0)
