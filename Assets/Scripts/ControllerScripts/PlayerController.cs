@@ -10,6 +10,8 @@ using UnityEngine;
  */
 //THis script will be our first instance of branching utilizing if/else statements.
 
+//we need to make things serialized if we want them to show up in the inspector.
+[System.Serializable]
 public class PlayerController : Controller
 {
     public KeyCode moveForwardKey;
@@ -21,8 +23,33 @@ public class PlayerController : Controller
     // Start is called before the first frame update
     public override void Start()
     {
+        // If we have a GameManager
+        if (GameManager.instance != null)
+        {
+            // And it tracks the players
+            if (GameManager.instance.players != null)
+            {
+                // add them to the list robin.
+                GameManager.instance.players.Add(this);
+            }
+        }
         // Run the Start() function from the parent (base) class
         base.Start();
+    }
+
+    //after we add the ability to add players to the list, now we need to be able to delete them from the lists...planning and organization is key.
+    public void OnDestroy()
+    {
+        // If we have a GameManager
+        if (GameManager.instance != null)
+        {
+            // And it tracks the player(s)
+            if (GameManager.instance.players != null)
+            {
+                // Deregister with the GameManager
+                GameManager.instance.players.Remove(this);
+            }
+        }
     }
 
     // Update is called once per frame
