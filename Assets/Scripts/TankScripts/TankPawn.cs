@@ -75,5 +75,16 @@ public class TankPawn : Pawn
             Debug.LogWarning("WARNING: No Shooter in TankPawn.Shoot()!");
         }
     }
+
+    //override the rotate towards function from the parent class.
+    public override void RotateTowards(Vector3 targetPosition)
+    {
+        // Find the vector to our target
+        Vector3 vectorToTarget = targetPosition - transform.position;
+        // Find the rotation to look down that vector
+        Quaternion targetRotation = Quaternion.LookRotation(vectorToTarget, Vector3.up);
+        // Rotate closer to that vector, but don't rotate more than our turn speed allows in one frame
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+    }
 }
 
