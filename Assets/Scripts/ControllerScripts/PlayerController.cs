@@ -34,7 +34,7 @@ public class PlayerController : Controller
             }
         }
         // Run the Start() function from the parent (base) class
-        base.Start();
+        //base.Start();
     }
 
     //after we add the ability to add players to the list, now we need to be able to delete them from the lists...planning and organization is key.
@@ -59,7 +59,7 @@ public class PlayerController : Controller
         ProcessInputs();
 
         // Run the Update() function from the parent (base) class
-        base.Update();
+        //base.Update();
     }
 
     public void ProcessInputs()
