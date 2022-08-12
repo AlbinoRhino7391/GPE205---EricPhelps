@@ -23,11 +23,15 @@ public class Health : MonoBehaviour
         
     }
 
-    public void Heal(float amount, Pawn source)
+    public void Heal(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        currentHealth = currentHealth + amount;
-        //Debug.log(source.name + "healed for " + healAmount);
+        if(currentHealth < maxHealth)
+        {
+            currentHealth = currentHealth + amount;
+            //Debug.log(source.name + "healed for " + healAmount);
+        }
+
     }
     // we removed the update function
     public void TakeDamage(float damageDone, Pawn source)

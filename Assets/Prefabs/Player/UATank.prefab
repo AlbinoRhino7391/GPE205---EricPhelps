@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3274042010791137034}
   - component: {fileID: 3274042010791137039}
   - component: {fileID: -4226455649525167156}
+  - component: {fileID: 1630811851071486196}
   m_Layer: 0
   m_Name: UATank
   m_TagString: Untagged
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacc859f41057cf45b1df7eff627f0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 50
   maxHealth: 100
 --- !u!114 &-4226455649525167156
 MonoBehaviour:
@@ -195,6 +196,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noiseDistance: 5
+--- !u!114 &1630811851071486196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427108204034159186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899e6e53a98fd814480c3abeded61ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3274042011707279083
 GameObject:
   m_ObjectHideFlags: 0
